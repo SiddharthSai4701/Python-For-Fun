@@ -6,8 +6,11 @@ Created on Mon Dec 27 21:39:21 2021
 """
 
 import random
+
+# Accepting the user's choice of show
 show = int(input("Choose a show:\n1.) F.R.I.E.N.D.S\n2.) How I Met Your Mother\n3.) Modern Family\n4.) The Big Bang Theory\n"))
 
+# Function to randomly generate an episode from the show F.R.I.E.N.D.S
 def friends():
     season = random.randint(1,10)
     
@@ -24,6 +27,7 @@ def friends():
         
     return season, episode
 
+# Function to randomly generate an episode from the show How I Met Your Mother
 def himym():
     season = random.randint(1,9)
     
@@ -36,6 +40,7 @@ def himym():
         
     return season, episode
 
+# Function to randomly generate an episode from the show Modern Family
 def modern_fam():
     if season == 1 or season == 2 or season == 3 or season == 4 or season == 5 or season == 6:
         episode = random.randint(1,24)
@@ -46,6 +51,7 @@ def modern_fam():
         
     return season, episode
 
+# Function to randomly generate an episode from the show The Big Bang Theory
 def TBBT():
     season = random.randint(1,12)
     
@@ -58,6 +64,7 @@ def TBBT():
     
     return season, episode
 
+# Logic to print out the randomly generated season and episode from the chosen T.V show
 if show ==1:
     season,episode=friends()
     print("Hi!! I suggest you watch Season %d: Episode %d of F.R.I.E.N.D.S!! Enjoy!!"%(season,episode))
